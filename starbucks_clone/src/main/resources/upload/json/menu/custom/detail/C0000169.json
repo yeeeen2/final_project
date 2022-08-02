@@ -1,0 +1,11 @@
+{
+    "result_code": "SUCCESS",
+    "error_msg": "",
+    "alert_msg": "",
+    "location_href": "",
+    "location_replace": "",
+    "custom_script": "",
+    "total_cnt": 0,
+    "data": "{  \"categoryCode\" : \"C0000169\",  \"categoryName\" : \"컵&리드 옵션\",  \"engCategoryName\" : \"\",  \"applyType1\" : \"01\",  \"applyType2\" : \"\",  \"level\" : \"1\",  \"categoryDesc\" : \"\",  \"categoryList\" : [ {    \"categoryCode\" : \"C0000264\",    \"categoryName\" : \"리드\",    \"engCategoryName\" : \"\",    \"applyType1\" : \"01\",    \"applyType2\" : \"01\",    \"level\" : \"2\",    \"categoryDesc\" : \"\",    \"maxQty\" : \"0\",    \"maxQtyMsg\" : \"\",    \"stdRecipeFlag\" : \"N\",    \"payType\" : \"\",    \"customGrp\" : \"C\",    \"btnStatus\" : \"D\",    \"skuList\" : [ {      \"skuNo\" : \"4002090000309\",      \"skuName\" : \"돔 리드\",      \"baseQty\" : \"0\",      \"stdRecipeFlag\" : \"N\",      \"calories\" : \"0\",      \"price\" : \"0\",      \"callingName\" : \"돔 리드\",      \"callingSeq\" : \"9900\",      \"payType\" : \"\",      \"customGrp\" : \"C\",      \"btnStatus\" : \"D\",      \"markingName\" : \"Dome\",      \"markingSeq\" : \"9900\",      \"skuNameShort\" : \"돔 리드로 변경\"    } ]  } ]}",
+    "result_api_code": ""
+}

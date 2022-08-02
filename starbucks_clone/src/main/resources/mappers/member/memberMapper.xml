@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.clone.starbucks.DAO.IMemberDAO">
+
+	<select id="isExistPhone" parameterType="String" resultType="int">
+		SELECT count(*) FROM register WHERE phone=#{phone}
+	</select>
+	
+	<select id="isExistId" parameterType="String" resultType="int">
+		SELECT count(*) FROM userinfo WHERE id= #{id}
+	</select> 
+	
+	<insert id="insertUserInfo" parameterType="com.clone.starbucks.DTO.UserInfoDTO">
+		<choose>
+			<when test='nickname != null'>
+				INSERT INTO userinfo (id, pw, nickname) VALUES(#{id}, #{pw}, #{nickname})
+			</when>
+			<otherwise>
+				INSERT INTO userinfo (id, pw) VALUES(#{id}, #{pw})
+			</otherwise>
+		</choose>
+	</insert>
+	
+	
+	<insert id="insertMember" parameterType="com.clone.starbucks.DTO.RegisterDTO">
+		INSERT INTO register (id, name, phone, email, birth_year, birth_month, birth_day, gender, event_e, event_sms) 
+		VALUES(#{id}, #{name}, #{phone}, #{email}, #{birth_year}, #{birth_month}, #{birth_day}, #{gender}, #{event_e}, #{event_sms})
+	</insert>
+
+	
+</mapper>
+

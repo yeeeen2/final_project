@@ -1,0 +1,152 @@
+@charset 'utf-8';
+
+/* My Starbucks > My 쿠폰 > 사용 가능한 쿠폰 */
+.ms_ecoupon .ec_tab > dd{padding-top:50px;}
+.ms_ecoupon .ec_info{width:auto;height:auto;margin-bottom:30px;padding:0;background-image:none;}
+.ms_ecoupon .ec_info .info_txt{margin-bottom:10px;padding:20px;background:url('../img/util/ec/top_bg.jpg') repeat center top;}
+.ms_ecoupon .ec_info .p2{width:auto;}
+.ms_ecoupon .ec_info .btn{position:static;text-align:right;}
+.ms_ecoupon .ec_info .btn a{display:inline-block;width:98px;height:28px;border:1px solid #bb9f65;border-radius:3px;background:#e2c383;color:#222;font-size:12px;font-weight:bold;line-height:28px;text-align:center;}
+.ms_ecoupon .ecPop .couponTabList{height:auto;margin-bottom:24px;}
+.ms_ecoupon .ecPop .couponTabList:after{display:block;content:'';clear:both;}
+.ms_ecoupon .ecPop .couponTabList li{padding-right:16px;}
+.ms_ecoupon .ecPop .myCouponWrap .input:after{display:block;content:'';clear:both;}
+.ms_ecoupon .ecPop .myCouponWrap input{border:1px solid #ddd;border-radius:3px;color:#222;font-size:12px;font-family:'Arial';text-indent:5px;}
+/* .ms_ecoupon .ecPop .myCouponWrap input[type="tel"]:disabled{background-color:#fafafa !important;opacity:1;} 211101 추가 */
+.ms_ecoupon .ecPop .myCouponCb3 .line{float:left;display:block;width:11px;height:28px;background:url('../img/util/ec/dash_bg.jpg') center center no-repeat;}
+.ms_ecoupon .ecPop .myCouponCb3 .starcoupon_input{/* margin-bottom:20px; */padding-bottom:20px;/* border-bottom:1px solid #dbdbdb; */}
+.ms_ecoupon .ecPop .myCouponCb3 .starcoupon_input label{display:block;margin-bottom:10px;background:url('../img/util/bullet_grey.gif') 0 5px no-repeat;color:#222;font-size:12px;text-indent:10px;}
+.ms_ecoupon .ecPop .myCouponCb3 .starcoupon_input input{float:left;width:117px;height:26px;margin-right:0;}
+.ms_ecoupon .ecPop .myCouponCb3 .pin_input{margin-bottom:20px;}
+.ms_ecoupon .ecPop .myCouponCb3 .pin_input .con{background:url('../img/util/bullet_grey.gif') 0 5px no-repeat;color:#222;font-size:12px;margin-bottom:10px;text-indent:10px;}
+.ms_ecoupon .ecPop .myCouponCb3 .pin_input .input{width:100%;height:26px;}
+.ms_ecoupon .ecPop .myCouponCb3 .pin_input input{width:100%;height:26px;line-height:26px;}
+.ms_ecoupon .ecPop .myCouponCb3 li.green{color:#006633;} /* 211101 추가 */
+.ms_ecoupon .ecPop .myCouponCb3.nonsr_user .starcoupon_input label,
+/* .ms_ecoupon .ecPop .myCouponCb3.nonsr_user .pin_input .con {opacity:0.4;} 211105 추가 */
+
+/* My Starbucks > My 쿠폰 > 쿠폰 히스토리 */
+.ms_ecoupon dl.my_rsh_pick_bg dt{width:auto;padding-right:20px;}
+.ms_ecoupon dl.my_rsh_pick_bg{background-position:left top;}
+
+/* My Starbucks > My 스타벅스 카드 > 카드 등록 */
+#starCodePopup{overflow:hidden;display:none;position:fixed;z-index:100;top:50%;left:50%;margin:0 auto;width:420px;margin-left:-210px;border-radius:3px;background-color:#fff;}
+#starCodePopup .sc_head{position:relative;padding:15px;background:#8c8279;color:#fff;font-size:14px;}
+#starCodePopup .sc_head .close{position:absolute;top:15px;right:11px;}
+#starCodePopup .sc_head .close a{display:block;width:14px;height:14px;transition:transform 1s;-webkit-transition:-webkit-transform 1s;background:url('../img/util/cal/calpop_close2n.png') 0 0 no-repeat;background-size:100% auto;text-indent:-9999px}
+#starCodePopup .sc_contents{position:relative;margin-bottom:20px;padding:20px 20px 0 20px;}
+#starCodePopup .sc_contents .sc_desc{color:#000;font-size:12px;line-height:16px;word-break:keep-all;}
+#starCodePopup .sc_input {padding-top:20px;}
+#starCodePopup .sc_input .con{display:block;margin-bottom:10px;padding-left:10px;background:url('../img/util/bullet_grey.gif') 0 5px no-repeat;color:#222;font-size:12px;text-indent:10px;}
+#starCodePopup .sc_input .input{width:100%;height:28px;}
+#starCodePopup .sc_input .input input{width:100%;height:26px;border:1px solid #ddd;border-radius:3px;color:#222;font-size:12px;text-indent:5px;font-family:'Arial';font-weight:400;line-height:26px;}
+#starCodePopup .sc_info{padding:20px;background-color:#f4f4f2;}
+#starCodePopup .sc_info .sc_info_cont{position:relative;height:130px;margin-bottom:15px;color:#222;font-size:12px;line-height:1.3;} /* 211118 수정 */
+#starCodePopup .sc_info .sc_info_cont ul li{padding-left:8px;margin-bottom:8px;background:url('../img/util/ec/dot.jpg') 0 5px no-repeat;} /* 211118 수정 */
+#starCodePopup .sc_info_cont .mCSB_scrollTools .mCSB_draggerRail{width:7px;background:rgba(0,0,0,0.4);}
+#starCodePopup .sc_info_cont .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background:#8a8a8a;width:5px;}
+#starCodePopup .sc_info .sc_btns{text-align:center;font-size:0;line-height:0;} /* 211015 추가 */
+#starCodePopup .sc_info .sc_btns a{display:inline-block;width:81px;height:28px;border:1px solid #bb9f65;border-radius:3px;background-color:#e2c383;color:#222;font-size:12px;font-weight:bold;line-height:30px;text-align:center;} /* 211015 수정 */
+#starCodePopup .sc_info .sc_btns a.btn_register{border-color:#bb9f65;background-color:#e2c383;color:#222;} /* 211015 추가 */
+#starCodePopup .sc_info .sc_btns a.btn_skip{margin-left:5px;border-color:#222;background-color:#222;color:#fff;} /* 211015 추가 */
+@media screen and (max-width: 1120px){
+    /* My Starbucks > My 쿠폰 > 쿠폰 히스토리 */
+    .ms_ecoupon dl.my_rsh_pick_bg{width:auto;}    
+}
+@media screen and (max-width: 1099px){
+    /* My Starbucks > My 쿠폰 > 쿠폰 히스토리 */
+    .ms_ecoupon dl.my_rsh_pick_bg{float:left;margin-top:0;margin-bottom:0;}
+    .ms_ecoupon dl.my_rsh_pick_bg dd{width:auto;}
+    .ms_ecoupon .my_card_pick_date{margin-top:0;}
+}
+@media screen and (max-width: 960px){
+	/* My Starbucks > My 리워드 > 별 히스토리 */
+	.my_card_pick_period .my_card_pick_bg{width:auto;}
+	.my_card_pick_period .my_card_pick_bg dd{width:calc(100% - 48px);}
+	.my_card_pick_period .my_card_pick_date{width:460px;}
+    .my_card_pick_period .my_card_pick_date dd{width:calc(100% - 48px);}
+	
+    /* My Starbucks > My 쿠폰 > 쿠폰 히스토리 */
+    .ms_ecoupon dl.my_rsh_pick_bg{margin-top:16px;}
+    .ms_ecoupon .my_card_pick_date{width:460px;margin-top:16px;}
+    .ms_ecoupon .my_card_pick_date dd{width:calc(100% - 48px);}
+    .ms_ecoupon .my_card_pick_date dd div.pick_date_each{width:140px;}
+}
+@media screen and (max-width: 760px){
+	/* My Starbucks > My 리워드 > 별 히스토리 */
+	.my_card_pick_period .my_card_pick_bg{float:none;}
+	.my_card_pick_period .my_card_pick_date{float:none;width:auto;margin-top:10px;margin-left:2%;padding-bottom:20px;}
+	.my_card_pick_period .my_card_pick_date dd div.pick_date_each{width:140px;}
+	
+    /* My Starbucks > My 쿠폰 > 쿠폰 히스토리 */
+    .ms_ecoupon dl.my_rsh_pick_bg{float:none !important;margin-top:0;}
+    .ms_ecoupon .my_card_pick_date{float:none !important;width:auto;margin-top:10px;}
+}
+@media screen and (max-width:640px){
+    /* My Starbucks > My 리워드 > 별 히스토리 */
+    .my_card_pick_period .my_card_pick_bg{background-position:left center;background-repeat:no-repeat;}
+    .my_card_pick_period .my_card_pick_bg dt{width:48px;font-size:14px;}
+    .my_card_pick_period .my_card_pick_date{margin-left:30px;padding-bottom:0;}
+    .my_card_pick_period .my_card_pick_date dt{width:56px;}
+    .my_card_pick_period .my_card_pick_date dd{width:calc(100% - 56px);}
+    section.my_rsh_info{padding-bottom:0;}
+    section.my_rsh_info ul.rsh_info_box li{padding-top:8px;padding-bottom:8px;}
+    section.my_rsh_info ul.rsh_info_box li p.t1{font-size:14px;}
+    section.my_rsh_info ul.rsh_info_box li p.t2{font-size:16px;}
+    table.rsh_use_info_tbl tbody tr td.icon_star_get span{width:82px;height:128px;margin-left:11px;box-sizing:border-box;font-size:16px;line-height:93px;}
+    table.rsh_use_info_tbl tbody tr td.rsh_tbl_dis span{top:21px;left:0;font-size:15px;font-weight:600;}
+    table.rsh_use_info_tbl tbody tr td.rsh_tbl_store span{top:44px;left:0;font-size:14px;line-height:24px;}
+    table.rsh_use_info_tbl tbody tr td.rsh_tbl_date span,
+    table.rsh_use_info_tbl tbody tr td.rsh_tbl_exp span{font-size:13px;font-weight:600;line-height:15px;}
+    table.rsh_use_info_tbl tbody tr td.rsh_tbl_date span{top:82px;left:0;}
+    table.rsh_use_info_tbl tbody tr td.rsh_tbl_exp span{top:103px;left:0;}
+
+    /* My Starbucks > My 쿠폰 > 사용 가능한 쿠폰 */    
+    .ms_ecoupon .ec_info{left:0;}
+    .ms_ecoupon .ec_info .btn{margin-top:0;}
+    .ms_ecoupon .ec_info .p1{width:auto;margin-bottom:0;}
+    .ms_ecoupon .ec_info .p1:first-child{margin-bottom:5px;}
+    .ms_ecoupon .ecPop .couponTabList li{float:none;width:auto;margin-bottom:5px;}
+    .ms_ecoupon .ecPop .couponTabList{margin-bottom:15px;}
+    .ms_ecoupon .ecPop .myCouponCb3 .line{width:3.3%;}
+    .ms_ecoupon .ecPop .myCouponCb3 .starcoupon_input input{width:30.5%;}
+
+    /* My Starbucks > My 쿠폰 > 쿠폰 히스토리 */
+    .ms_ecoupon .my_card_pick_date{margin-top:5px;margin-bottom:0;margin-left:0;}
+    .ms_ecoupon table.m_list_tb td img{width:75px;}
+}
+@media screen and (max-width:480px){
+    /* My Starbucks > My 리워드 > 별 히스토리 */
+    .my_card_pick_period .my_card_pick_bg dt{font-size:12px;}
+    .my_card_pick_period .my_card_pick_date{margin-bottom:15px;margin-left:10px;padding-left:0;}
+    .my_card_pick_period .my_card_pick_date dt{width:48px;}
+    .my_card_pick_period .my_card_pick_date dd div.pick_date_each{width:105px;}
+    table.rsh_use_info_tbl tbody tr td.icon_star_get span{width:72px;height:126px;font-size:14px;line-height:91px;}
+    table.rsh_use_info_tbl tbody tr td.rsh_tbl_dis span,
+    table.rsh_use_info_tbl tbody tr td.rsh_tbl_store span,
+    table.rsh_use_info_tbl tbody tr td.rsh_tbl_date span,
+    table.rsh_use_info_tbl tbody tr td.rsh_tbl_exp span{left:15px;}
+
+    /* My Starbucks > My 쿠폰 > 사용 가능한 쿠폰 */
+    .ms_ecoupon .ecPop .myCouponCb3 .line{width:4%;}
+    .ms_ecoupon .ecPop .myCouponCb3 .starcoupon_input input{width:29.5%;}
+    
+    /* My Starbucks > My 쿠폰 > 쿠폰 히스토리 */
+    .ms_ecoupon dl.my_rsh_pick_bg dt{width:48px;padding-right:0;}
+    .ms_ecoupon .my_card_pick_date dt{width:48px;}
+    .ms_ecoupon .my_card_pick_date dd div.pick_date_each{width:105px;}
+
+    /* My Starbucks > My 스타벅스 카드 > 카드 등록 */
+    #starCodePopup{width:96%;margin-left:-48%;}
+    #starCodePopup .sc_contents{padding:15px 15px 0 15px;}
+    #starCodePopup .sc_info{padding:15px;}
+}
+@media screen and (max-width:360px){
+	/* My Starbucks > My 리워드 > 별 히스토리 */
+	.my_card_pick_period .my_card_pick_date{height:auto;}
+	.my_card_pick_period .my_card_pick_date dt{float:none;}
+	.my_card_pick_period .my_card_pick_date dd{float:none;width:100%;}
+	
+    /* My Starbucks > My 쿠폰 > 쿠폰 히스토리 */
+    .ms_ecoupon .my_card_pick_date dd{width:100%;}
+}

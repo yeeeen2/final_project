@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	<mapper namespace="com.clone.starbucks.DAO.IMsrDAO">
+		
+		<insert id="insertEgift" parameterType="com.clone.starbucks.DTO.CardDTO">
+			INSERT INTO card VALUES(#{c_name}, #{c_saledate}, #{id, jdbcType=VARCHAR}, #{remaincost, jdbcType=INTEGER}, #{c_num}, #{c_master, jdbcType=INTEGER}, #{c_pin})
+		</insert>
+		
+		<select id="cardInfo" resultType="com.clone.starbucks.DTO.CardDTO">
+			SELECT * FROM card WHERE c_num=#{c_num}
+		</select>
+		
+		<select id="idCheck" parameterType="String" resultType="com.clone.starbucks.DTO.RegisterDTO">
+			SELECT * FROM register WHERE id=#{id}
+		</select>
+		
+	</mapper>
+

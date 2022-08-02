@@ -1,0 +1,11 @@
+{
+    "result_code": "SUCCESS",
+    "error_msg": "",
+    "alert_msg": "",
+    "location_href": "",
+    "location_replace": "",
+    "custom_script": "",
+    "total_cnt": 0,
+    "data": "{  \"categoryCode\" : \"C0000126\",  \"categoryName\" : \"과일&채소\",  \"engCategoryName\" : \"\",  \"applyType1\" : \"02\",  \"applyType2\" : \"\",  \"level\" : \"1\",  \"categoryDesc\" : \"\",  \"categoryList\" : [ {    \"categoryCode\" : \"C0000276\",    \"categoryName\" : \"애플민트\",    \"engCategoryName\" : \"\",    \"applyType1\" : \"01\",    \"applyType2\" : \"01\",    \"level\" : \"2\",    \"categoryDesc\" : \"\",    \"maxQty\" : \"0\",    \"maxQtyMsg\" : \"\",    \"stdRecipeFlag\" : \"Y\",    \"payType\" : \"\",    \"customGrp\" : \"C\",    \"btnStatus\" : \"U\",    \"skuList\" : [ {      \"skuNo\" : \"9900000000143\",      \"skuName\" : \"애플민트\",      \"baseQty\" : \"1\",      \"stdRecipeFlag\" : \"Y\",      \"calories\" : \"0\",      \"price\" : \"0\",      \"callingName\" : \"애플민트\",      \"callingSeq\" : \"9936\",      \"payType\" : \"\",      \"customGrp\" : \"C\",      \"btnStatus\" : \"U\",      \"markingName\" : \"Apple M\",      \"markingSeq\" : \"9936\",      \"skuNameShort\" : \"보통\"    } ]  } ]}",
+    "result_api_code": ""
+}

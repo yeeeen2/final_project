@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.clone.starbucks.DAO.IMenuDAO">
+	<select id="selectPrice" parameterType="String" resultType="int">
+		select p_price from product where p_name=#{p_name}
+	</select>
+	
+	<insert id="insertProduct" parameterType="com.clone.starbucks.DTO.ProductDTO">
+		insert into product values(#{p_category1}, #{p_category2}, #{p_name}, #{p_price})
+	</insert>
+	
+	<!-- coupon_popup -->
+	<select id="couponList" parameterType="String" resultType="com.clone.starbucks.DTO.E_couponDTO">
+		SELECT * FROM e_coupon WHERE id=#{id} and pon_used='N'
+	</select>
+	
+	<select id="cardList" parameterType="String" resultType="com.clone.starbucks.DTO.CardDTO">
+		SELECT * FROM card WHERE id=#{id}
+	</select>
+	
+</mapper>

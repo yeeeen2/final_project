@@ -1,0 +1,38 @@
+[
+	{
+		"p_category1": "음료",
+		"p_category2": "기타",
+		"p_name": "에스프레소 샷",
+		"p_price": "600"
+	},
+	{
+		"p_category1": "음료",
+		"p_category2": "기타",
+		"p_name": "시럽",
+		"p_price": "600"
+	},
+	{
+		"p_category1": "음료",
+		"p_category2": "기타",
+		"p_name": "휘핑",
+		"p_price": "600"
+	},
+	{
+		"p_category1": "음료",
+		"p_category2": "기타",
+		"p_name": "드리즐",
+		"p_price": "600"
+	},
+	{
+		"p_category1": "음료",
+		"p_category2": "기타",
+		"p_name": "자바칩",
+		"p_price": "600"
+	},
+	{
+		"p_category1": "음료",
+		"p_category2": "기타",
+		"p_name": "디카페인",
+		"p_price": "300"
+	}
+]

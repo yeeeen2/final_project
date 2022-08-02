@@ -1,0 +1,144 @@
+@charset 'utf-8';
+	
+/*=====================================================================================s::20191105 스타벅스 카드 등록 페이지 개선=====================================================================================*/
+.areeTitle {position:relative; width:100%; overflow: hidden;}
+.areeTitle h6,
+.areeTitle span.agreeCheck {float:left; box-sizing: border-box; padding:10px 0;}
+.areeTitle h6 {font-size: 16px; font-weight: bold; color: #222; padding-top:16px;}
+.areeTitle span.agreeCheck {position:relative; width:20%; float:right; margin:0 5px 0 0; display:inline-block;}
+
+input.scardAgree[type=checkbox]:not(old) {position: absolute; width:26px; height: 26px; top: 10px; right:0px; padding:0;  border: 0 none;  background: #fff; cursor: pointer;} 
+input.scardAgree[type=checkbox]:not(old) + label{position: absolute; right:0; display: inline-block; width: 26px; height: 26px; line-height: 26px; background: #fff url("https://image.istarbucks.co.kr/common/img/util/mem/mem_check_off.png") 0 0 no-repeat ; font-size: 13px; color: #3f4141; cursor: pointer; vertical-align: top; background-size: 26px; text-indent: -9999px; cursor: pointer;  font-size: 0;overflow: hidden;  z-index: 4}
+input.scardAgree[type=checkbox]:checked + label , input.dtpass[type=checkbox]:active + label {background: #fff url('https://image.istarbucks.co.kr/common/img/util/mem/mem_check_on.png') no-repeat 0 0;background-size: 26px;}
+
+.my_card_info_wrap header h6 + a.btnScardInfo,
+.card_tab_cont a.btnScardInfo {font-size:0; display:inline-block; width:26px; height:26px; background:#fff url('https://image.istarbucks.co.kr/upload/common/img/icon/ico_card_info.png') no-repeat 0 0; background-size: 26px; vertical-align: middle; margin:-4px 0 0 10px;}
+
+/*-------s::스타벅스 카드 등록 내 My DT Pass 영역 추가-------*/
+.scardDtWrap {position:relative; width:100%; margin-top:50px; padding:30px 20px; box-sizing: border-box; border-radius:3px; background-color: #f4f4f2; line-height:1.4;}
+.scardDtWrap .scardDtTitle {position:relative; width:100%; color:#222;}
+.scardDtWrap .scardDtTitle h5 {font-size:16px; font-weight: bold;}
+.scardDtWrap .scardDtTitle h5 span.pcBlock {display:block;}
+.scardDtWrap .scardDtTitle em {font-style:normal;}
+.scardDtWrap .scardDtTitle a.btnScardToggle {font-size:0;position:absolute; right:0; top:0; display:inline-block; width:40px; height:40px; background:#f4f4f2 url('https://image.istarbucks.co.kr/upload/common/img/icon/ico_card_arrow.png') no-repeat 0 0; background-size: 80px 40px; background-position: 0;}
+.scardDtWrap .scardDtTitle a.btnScardToggle.on {background-position: -40px 0;}
+
+.scardDtWrap .scardToggleWrap {padding-top:25px;}
+.scardDtWrap .scardToggleWrap p.scardInfoTxt {padding-bottom:10px; font-size:13px; color:#666;}
+.scardDtWrap .dpAreaaWrap {margin:0 0 30px 0; border-top:1px solid #eceae5;}
+.scardDtWrap .dpAreaaWrap .areeTitle h6 {padding:20px 0 5px 0;}
+.scardDtWrap .dpAreaaWrap .areeTitle input.dtpass[type=checkbox]:not(old),
+.scardDtWrap .dpAreaaWrap .areeTitle input.dtpass[type=checkbox]:not(old) + label {background-color:#f4f4f2; right:10px; top:18px; -webkit-appearance: none; -moz-appearance: none; appearance: none;  outline:none;} /* 20191226 ios 테두리 노출 수정  */
+
+/*차량번호 등록 시, 안내문구 및 닫기버튼*/
+.scardRegiInfo {width:100%; box-sizing: border-box; color:#666;}
+.scardRegiInfo ul {padding:17px 15px;}
+.scardRegiInfo .btnRegiClose {width:100%; box-sizing:border-box; border-top:1px solid #eceae5; padding:30px 10px 20px 10px; text-align: right;}
+.scardRegiInfo .btnRegiClose a,
+.scardRegiInfo .btnRegiClose span,
+.scardRegiInfo .btnRegiClose i {display:inline-block; vertical-align: middle;}
+.scardRegiInfo .btnRegiClose a {font-size:16px; color:#222;}
+.scardRegiInfo .btnRegiClose a:hover {text-decoration: none;}
+.scardRegiInfo .btnRegiClose a > span{color:#b79855;}
+.scardRegiInfo .btnRegiClose a > i {width:18px; height:18px; margin-left: 5px; background: url('https://image.istarbucks.co.kr/upload/common/img/icon/ico_card_cancle.png') no-repeat 0 0; background-size: 18px;}
+/*-------e::스타벅스 카드 등록 내 My DT Pass 영역 추가-------*/
+
+/*소유주 인증 팝업 수정*/
+.ownerPop .dtPopBtn a, .ownerPop .dtPopBtn2 a {display:inline-block; padding:0; vertical-aling:middle;}
+
+/*카드 등록 안내 신규  팝업*/
+.card_title_area {position:relative; text-align: center;}
+.card_title_area strong.card_info_ttl,
+.card_title_area a.btnScardInfo {display:inline-block;}
+.card_title_area a.btnScardInfo {margin: -7px 0 0 5px;}
+
+.dtPop.scardInfoPop {border:1px solid #222; border-radius:3px;}
+.dtPop.scardInfoPop div.head {background: #fff; color:#444; font-size:18px; font-weight: bold;}
+.dtPop.scardInfoPop {width:670px; left:0; right:0; margin:0 auto;}
+.dtPop.scardInfoPop .card_pop_regi_guide {width:100%; box-sizing:border-box; border-top:1px solid #ddd; border-bottom:1px solid #ddd;}
+.dtPop.scardInfoPop .card_pop_regi_guide img {width:100%;}
+.dtPop.scardInfoPop .card_pop_regi_guide img.mo_pop_gurde {display:none;}
+.dtPop.scardInfoPop .card_pop_regi_guide + p {padding:15px 20px; color:#666; font-size:12px;}
+.dtPop.scardInfoPop div.head p.close a {width:18px; height:18px; background: url('https://image.istarbucks.co.kr/upload/common/img/icon/ico_card_cancle.png') 0 0 no-repeat; background-size: 18px;}
+.dtPop.scardInfoPop .dtPopBtn a.dtPopBtn2 {padding:0; margin:0 auto;}
+
+@media screen and (max-width:640px) {
+	.areeTitle {word-break: keep-all;}
+	.areeTitle h6 {width:auto;}
+	.areeTitle span.agreeCheck {width:26px;}
+	.scardDtWrap .scardDtTitle h5 {width:80%;}
+	.scardDtWrap {padding:20px 10px; word-break: keep-all;}
+	
+	.dtConWrap.scardDtWrap .dtRegiDl dt {padding:10px 5px; background: transparent;}
+	.dtConWrap.scardDtWrap .dtRegiDl dd {width: 100%; padding: 0 0 10px 0; box-sizing: border-box;}
+	
+	.scardRegiInfo ul {padding:17px 0;}
+	.scardRegiInfo .btnRegiClose a {font-size:14px;}
+	
+	/*카드 등록 안내 신규  팝업*/
+	.dtPop.scardInfoPop {width:90%; margin:10% auto 0 auto !important; top:0;}
+	.dtPop.scardInfoPop div.head {width:100%; padding:0;}
+	.dtPop.scardInfoPop div.head p.tt {width:80%; margin:0 auto; padding-top:20px;}
+	.dtPop.scardInfoPop .card_pop_regi_guide {border-top:0; width: 90%; margin: 0 auto;}
+	.dtPop.scardInfoPop .card_pop_regi_guide img.pc_pop_gurde {display:none;}
+	.dtPop.scardInfoPop .card_pop_regi_guide img.mo_pop_gurde {display:block;}
+	.dtPop.scardInfoPop div.head p.close {right:20px;}
+	
+	/*소유주 팝업 수정*/
+	.dtPop.ownerPop {width:90%;}
+	
+	/*등록 버튼영역*/
+	.my_card_info_inner {margin:20px auto 0 auto;}
+}
+
+@media screen and (max-width:414px) {
+	/*카드 등록 안내 신규  팝업*/
+	.dtPop.scardInfoPop div.head p.tt {font-size:16px;}
+}
+
+@media screen and (max-width:320px) {
+	.areeTitle h6 {width:85%;}	
+}
+
+/*=====================================================================================e::20191105 스타벅스 카드 등록 페이지 개선=====================================================================================*/
+
+/*s::20191114 회원가입완료 페이지 차량번호 등록 추가 영역*/
+.find_mem_wrap.regiDtWrap {padding-bottom:30px;}
+.dtConWrap.joinDtWrap {max-width:570px; margin: 0 auto 30px;}
+.dtConWrap.joinDtWrap .dtRegiTbl {background: #fff; height:84px; overflow: hidden; box-sizing: border-box;}
+.dtConWrap.joinDtWrap .dtRegiDl dt {position: relative; display: inline-block; vertical-align: top; width: 30%; float: initial; float: auto; width:25%; height:80px;}
+.dtConWrap.joinDtWrap .dtRegiDl dd {background: #fff; margin:0; display:inline-block; float:initial; float:auto; width:70%;}
+.dtConWrap.joinDtWrap .dtRegiDl dd input.card_regi_input2 {width:60%; /*background: #f4f4f2;*/ color:#757575; padding:0 5px;}
+.dtConWrap.joinDtWrap .dtRegiDl dd .dtDDBtn {width:18%;}
+.dtConWrap.joinDtWrap .dtRegiDl dd .dtRegDdTxt2 {padding:8px 0;}
+.dtConWrap.joinDtWrap .scardRegiInfo ul li {font-size:13px;}
+
+.btn_gift_card.btn_add_dt {margin:30px auto 125px auto; max-width:530px;}
+
+.dtPopBtn a.dtPopBtn1.expreeDt,
+.dtPopBtn a.dtPopBtn2.expreeDt {display: inline-block; padding:0; margin-top:10px;}/*20191204 추가 class="expreeDt"*/
+
+@media screen and (max-width:640px) {
+	.find_mem_wrap.regiDtWrap {padding-bottom:20px;}
+	.dtConWrap.joinDtWrap {max-width:100%; margin: 0 auto 30px; padding:20px 15px;}
+	.dtConWrap.joinDtWrap .dtRegiTbl,
+	.dtConWrap.joinDtWrap .dtRegiDl dd {background: #f4f4f2;}
+	
+	.dtConWrap.joinDtWrap .dtRegiTbl {height:100%;}
+	
+	.dtConWrap.joinDtWrap .dtRegiDl dt,
+	.dtConWrap.joinDtWrap .dtRegiDl dd {display:block; width:100%; height:auto;}
+	.dtConWrap.joinDtWrap .dtRegiDl dd input.card_regi_input2 {background: #fff; width:78%;}
+	.scardDtWrap.joinDtWrap .dpAreaaWrap .areeTitle input.dtpass[type=checkbox]:not(old),
+	.scardDtWrap.joinDtWrap .dpAreaaWrap .areeTitle input.dtpass[type=checkbox]:not(old) + label {right:0;}
+	
+	.btn_gift_card.btn_add_dt {margin:20px auto 60px auto; max-width:80%;}
+}
+
+@media screen and (max-width:320px) {
+	.find_mem_wrap {padding:50px 10px 40px 10px;}	
+}
+/*e::20191114 회원가입완료 페이지 차량번호 등록 추가 영역*/
+
+
+

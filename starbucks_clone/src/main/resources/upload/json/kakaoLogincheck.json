@@ -1,0 +1,25 @@
+{
+	"id": 2299016976,
+	"connected_at": "2022-06-20T16:32:17Z",
+	"properties": {
+		"nickname": "김지혜"
+	},
+	"kakao_account": {
+		"profile_nickname_needs_agreement": false,
+		"profile": {
+			"nickname": "김지혜"
+		},
+		"has_email": true,
+		"email_needs_agreement": false,
+		"is_email_valid": true,
+		"is_email_verified": true,
+		"email": "gmg_213@naver.com",
+		"has_birthday": true,
+		"birthday_needs_agreement": false,
+		"birthday": "0618",
+		"birthday_type": "SOLAR",
+		"has_gender": true,
+		"gender_needs_agreement": false,
+		"gender": "female"
+	}
+}

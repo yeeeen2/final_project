@@ -1,0 +1,11 @@
+{
+    "result_code": "SUCCESS",
+    "error_msg": "",
+    "alert_msg": "",
+    "location_href": "",
+    "location_replace": "",
+    "custom_script": "",
+    "total_cnt": 0,
+    "data": "{  \"categoryCode\" : \"C0000038\",  \"categoryName\" : \"기타\",  \"engCategoryName\" : \"??????????\",  \"applyType1\" : \"02\",  \"applyType2\" : \"\",  \"level\" : \"1\",  \"categoryDesc\" : \"\",  \"categoryList\" : [ {    \"categoryCode\" : \"C0000130\",    \"categoryName\" : \"스파클링\",    \"engCategoryName\" : \"\",    \"applyType1\" : \"01\",    \"applyType2\" : \"01\",    \"level\" : \"2\",    \"categoryDesc\" : \"\",    \"maxQty\" : \"0\",    \"maxQtyMsg\" : \"\",    \"stdRecipeFlag\" : \"Y\",    \"payType\" : \"\",    \"customGrp\" : \"C\",    \"btnStatus\" : \"U\",    \"skuList\" : [ {      \"skuNo\" : \"107038\",      \"skuName\" : \"라이트 스파클링\",      \"baseQty\" : \"0\",      \"stdRecipeFlag\" : \"N\",      \"calories\" : \"0\",      \"price\" : \"0\",      \"callingName\" : \"라이트 스파클링\",      \"callingSeq\" : \"8901\",      \"payType\" : \"\",      \"customGrp\" : \"C\",      \"btnStatus\" : \"U\",      \"markingName\" : \"Lt-SPK\",      \"markingSeq\" : \"8901\",      \"skuNameShort\" : \"라이트\"    }, {      \"skuNo\" : \"107037\",      \"skuName\" : \"스파클링\",      \"baseQty\" : \"1\",      \"stdRecipeFlag\" : \"Y\",      \"calories\" : \"0\",      \"price\" : \"0\",      \"callingName\" : \"\",      \"callingSeq\" : \"8901\",      \"payType\" : \"\",      \"customGrp\" : \"C\",      \"btnStatus\" : \"U\",      \"markingName\" : \"SPK\",      \"markingSeq\" : \"8901\",      \"skuNameShort\" : \"미디엄\"    }, {      \"skuNo\" : \"107040\",      \"skuName\" : \"엑스트라 스파클링\",      \"baseQty\" : \"0\",      \"stdRecipeFlag\" : \"N\",      \"calories\" : \"0\",      \"price\" : \"0\",      \"callingName\" : \"엑스트라 스파클링\",      \"callingSeq\" : \"8901\",      \"payType\" : \"\",      \"customGrp\" : \"C\",      \"btnStatus\" : \"U\",      \"markingName\" : \"X-SPK\",      \"markingSeq\" : \"8901\",      \"skuNameShort\" : \"엑스트라\"    } ]  } ]}",
+    "result_api_code": ""
+}

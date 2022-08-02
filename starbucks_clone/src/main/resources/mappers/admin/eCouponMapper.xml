@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	<mapper namespace="com.clone.starbucks.DAO.IAdminDAO">
+
+
+	<select id="selectNo" parameterType="int" resultType="int">
+		SELECT * FROM e_coupon WHERE pon_no=#{pon_no}
+	</select>
+	
+	<!-- pon_no에 MAX+1 함수이용하기 -->
+	<insert id="insertEcoupon" parameterType="com.clone.starbucks.DTO.E_couponDTO">
+		<selectKey keyProperty="pon_no" resultType="int" order="BEFORE">
+			SELECT NVL(MAX(pon_no),0)+1 FROM e_coupon
+		</selectKey>
+		INSERT INTO e_coupon VALUES(#{pon_no}, #{pon_category}, #{pon_num}, #{pon_name}, #{pon_startdate}, #{pon_enddate}, #{pon_used}, #{pon_usedate, jdbcType=DATE}, #{pon_cash}, #{id, jdbcType=VARCHAR})	
+	</insert>
+	
+	</mapper>

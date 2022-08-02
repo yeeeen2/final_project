@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.clone.starbucks.DAO.IMenuDAO">
+	<insert id="insertMyMenu" parameterType="com.clone.starbucks.DTO.CustomDTO">
+		<selectKey keyProperty="cus_no" resultType="int" order="BEFORE">
+			select cus_no.nextval as cus_no from DUAL
+		</selectKey>
+		insert into custom values(#{cus_no}, #{id}, #{p_name}, #{cus_nickname}, default, #{cus_op})
+	</insert>
+</mapper>

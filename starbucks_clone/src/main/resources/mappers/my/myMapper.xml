@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	<mapper namespace="com.clone.starbucks.DAO.IMyDAO">
+	
+	<select id="c_numCheck" parameterType="String" resultType="com.clone.starbucks.DTO.CardDTO">
+		SELECT * FROM card WHERE c_num=#{c_num}
+	</select>
+	
+	<select id="nameFind" parameterType="String" resultType="String">
+		SELECT c_name FROM card WHERE c_num=#{c_num}
+	</select>
+	
+	<update id="updateCard" parameterType="com.clone.starbucks.DTO.CardDTO">
+		UPDATE card SET c_name=#{c_name}, id=#{id}, c_master=#{c_master} WHERE c_num=#{c_num}
+	</update>
+	
+	<select id="cMaster1Bool" parameterType="String" resultType="int">
+		SELECT count(c_num) FROM card WHERE id=#{id} and c_master=1
+	</select>
+	
+	<select id="cMaster1Num" parameterType="String" resultType="String">
+		SELECT c_num FROM card WHERE id=#{id} and c_master=1
+	</select>
+	
+	
+	<select id="cardList" parameterType="String" resultType="com.clone.starbucks.DTO.CardDTO">
+		SELECT * FROM card WHERE id=#{id}
+	</select>
+
+
+	<update id="N_M_update" parameterType="com.clone.starbucks.DTO.CardDTO">
+		UPDATE card SET c_name=#{c_name}, c_master=#{c_master} WHERE c_num=#{c_num}
+	</update>
+	
+	
+	<select id="masterBool" parameterType="String" resultType="int">
+		SELECT c_master FROM card WHERE c_num=#{c_num}
+	</select>
+	
+	<select id="countC_num" parameterType="String" resultType="int">
+		SELECT count(c_num) FROM card WHERE id=#{id}
+	</select>
+	
+	<update id="masterUpdate" parameterType="String">
+		UPDATE card SET c_master=#{c_master} WHERE id=#{id}
+	</update>
+	
+	<update id="remainUpdate" parameterType="com.clone.starbucks.DTO.CardDTO">
+		UPDATE card SET remaincost=#{remaincost} WHERE c_num=#{c_num}
+	</update>
+	
+	<!-- /eCard -->
+	
+	<!-- e-coupon -->
+	
+	<select id="pon_numCheck" parameterType="String" resultType="com.clone.starbucks.DTO.E_couponDTO">
+		SELECT * FROM e_coupon WHERE pon_num=#{pon_num} 
+	</select>
+	
+	<update id="idUpdate" parameterType="com.clone.starbucks.DTO.E_couponDTO">
+		UPDATE e_coupon SET id=#{id} WHERE pon_num=#{pon_num}
+	</update>
+	
+		
+	<update id="useCoupon" parameterType="String">
+		update e_coupon set pon_used='Y', pon_usedate=default where pon_no=#{pon_no}
+	</update>
+	
+	<select id="couponCount" parameterType="String" resultType="int">
+		SELECT count(*) FROM e_coupon WHERE id=#{id} and pon_used='N'
+	</select>
+	
+	
+	<select id="eReceipt" parameterType="String" resultType="com.clone.starbucks.DTO.ReceiptDTO">
+		SELECT a.saledate, a.p_name, a.salecount, a.salecount*b.p_price price, a.salemethod FROM sale a LEFT OUTER JOIN product b ON a.p_name=b.p_name WHERE a.id=#{id} ORDER BY a.saledate DESC
+	</select>
+	
+	<!-- <select id="printList" resultType="com.clone.starbucks.DTO.ReceiptDTO">
+		SELECT * FROM(SELECT rownum rn, a.saledate, a.p_name, a.salecount, a.salecount*b.p_price price FROM(SELECT * FROM sale a LEFT OUTER JOIN product b ON a.p_name=b.p_name) A) WHERE a.id=#{id} and RN BETWEEN #{b} and #{e} ORDER BY a.saledate DESC
+	</select> -->
+	
+	<select id="dataCount" parameterType="String" resultType="int">
+		SELECT count(*) FROM sale a LEFT OUTER JOIN product b ON a.p_name=b.p_name WHERE a.id=#{id}
+	</select>
+	
+	
+	<!-- MY INDEX - 예은 -->
+	<select id="userCard" parameterType="com.clone.starbucks.DTO.CardDTO" resultType="int">
+		SELECT count(*) FROM card WHERE id=#{id}
+	</select>
+	
+	<select id="userCoupon" parameterType="com.clone.starbucks.DTO.E_couponDTO" resultType="int">
+		SELECT count(*) FROM e_coupon WHERE id=#{id}
+	</select>
+	
+	<select id="userAllInfo" parameterType="String" resultType="com.clone.starbucks.DTO.AllDTO">
+		SELECT a.id,a.star,a.grade,a.nickname,b.c_name,b.remaincost,b.c_num, b.c_master
+		FROM userinfo a LEFT OUTER JOIN card b ON a.id = b.id
+		WHERE a.id = #{id} and b.c_master = '1'
+	</select>
+
+	
+	<select id="useCouponCount" parameterType="com.clone.starbucks.DTO.E_couponDTO" resultType="int">
+		SELECT count(*) FROM e_coupon WHERE id=#{id} and pon_used='Y'
+	</select>
+	
+	
+	<!-- DTPASS - 예은 -->
+	<select id="isExistCar" parameterType="String" resultType="int">
+		SELECT count(*) FROM userinfo WHERE DTPass= #{DTPass}
+	</select>
+
+	<update id="updateDtpass" parameterType="com.clone.starbucks.DTO.UserInfoDTO">
+		update userinfo set DTPass=#{DTPass} where id=#{id}
+	</update>
+	
+	<update id="deleteDtpass" parameterType="com.clone.starbucks.DTO.UserInfoDTO">
+		update userinfo set DTPass='' where id=#{id}
+	</update>
+	
+	<!-- Star 지혜 -->
+	<update id="updateStar" parameterType="com.clone.starbucks.DTO.UserInfoDTO">
+		UPDATE userinfo SET star=#{star} WHERE id=#{id}
+	</update>
+	
+	<!-- My메뉴 지혜 -->
+	<select id="customList" parameterType="Map" resultType="com.clone.starbucks.DTO.CustomDTO">
+		select list.* from(
+			select rownum rn, numbering.* from(select * from custom where id=#{id})numbering
+		)list where rn between #{begin} and #{end}
+	</select>
+	
+	<select id="cusCount" parameterType="String" resultType="int">
+		select count(*) from custom where id=#{id}
+	</select>
+	
+	<delete id="deleteCustom" parameterType="int">
+		delete from custom where cus_no=#{cus_no}
+	</delete>
+	
+	<select id="saleTop3" parameterType="hashmap" resultType="String">
+        select p_name from(
+	        select 
+	            a.p_name
+	            , sum(a.salecount) SC
+	        from sale a
+	            , register b
+	            , product c 
+	        where b.birth_year between #{startDate} 
+	            and #{endDate} 
+	            and b.gender = #{gender}
+	            and a.id = b.id 
+	            and a.p_name = c.p_name 
+	            and trim(c.p_category1) = #{category}
+	        group by a.p_name
+	        order by SC desc
+	    ) where rownum <![CDATA[<=]]> 3
+	</select>
+	
+	<select id="getInfo" parameterType="String" resultType="com.clone.starbucks.DTO.RegisterDTO">
+	   select birth_year, gender from register where id=#{id}
+	</select>
+	
+	<update id="updateReward" parameterType="com.clone.starbucks.DTO.UserInfoDTO">
+	   update userinfo set cupreward=#{cupreward} where id=#{id}
+	</update>
+	
+	<!-- 개인정보관리 - 예은 -->
+	<select id="userInfo" resultType="com.clone.starbucks.DTO.RegisterDTO">
+		SELECT * FROM register WHERE id=#{id}
+	</select>
+	<select id="detailinfo" resultType="com.clone.starbucks.DTO.UserInfoDTO">
+		SELECT star, grade, nickname, cupreward, DTPass FROM userInfo WHERE id=#{id}
+	</select>
+	
+	<update id="updateRegInfo" parameterType="com.clone.starbucks.DTO.RegisterDTO" >
+		UPDATE register SET name=#{name}, phone=#{phone}, email=#{email},
+		birth_year=#{birth_year}, birth_month=#{birth_month}, birth_day=#{birth_day},
+		event_sms=#{event_sms}, event_e=#{event_e}
+		WHERE id=#{id}
+	</update>
+	
+	<update id="updateUserInfo" parameterType="com.clone.starbucks.DTO.UserInfoDTO" >
+		UPDATE userInfo SET nickname=#{nickname}, cupreward=#{cupreward} WHERE id=#{id}
+	</update>
+	
+	<update id="updatePwd" parameterType="com.clone.starbucks.DTO.UserInfoDTO">
+		update userInfo SET pw=#{pw} WHERE id=#{id}
+	</update>
+	
+	<delete id="deleteReg" parameterType="String">
+		DELETE FROM register WHERE id=#{id}
+	</delete>
+	<delete id="deleteUser" parameterType="String">
+		DELETE FROM userInfo WHERE id=#{id}
+	</delete>
+	
+	</mapper>

@@ -1,0 +1,11 @@
+{
+    "result_code": "SUCCESS",
+    "error_msg": "",
+    "alert_msg": "",
+    "location_href": "",
+    "location_replace": "",
+    "custom_script": "",
+    "total_cnt": 0,
+    "data": "{  \"categoryCode\" : \"C0000178\",  \"categoryName\" : \"베이스\",  \"engCategoryName\" : \"\",  \"applyType1\" : \"02\",  \"applyType2\" : \"\",  \"level\" : \"1\",  \"categoryDesc\" : \"정량 초과 시 기본 레시피대로 제조됩니다.\",  \"categoryList\" : [ {    \"categoryCode\" : \"C0000717\",    \"categoryName\" : \"민트 초코 베이스\",    \"engCategoryName\" : \"\",    \"applyType1\" : \"01\",    \"applyType2\" : \"01\",    \"level\" : \"2\",    \"categoryDesc\" : \"\",    \"maxQty\" : \"0\",    \"maxQtyMsg\" : \"\",    \"stdRecipeFlag\" : \"Y\",    \"payType\" : \"\",    \"customGrp\" : \"C\",    \"btnStatus\" : \"U\",    \"skuList\" : [ {      \"skuNo\" : \"9900000001190\",      \"skuName\" : \"민트 초코 베이스\",      \"baseQty\" : \"1\",      \"stdRecipeFlag\" : \"Y\",      \"calories\" : \"0\",      \"price\" : \"0\",      \"callingName\" : \"민트초코베이스\",      \"callingSeq\" : \"\",      \"payType\" : \"\",      \"customGrp\" : \"C\",      \"btnStatus\" : \"U\",      \"markingName\" : \"MC\",      \"markingSeq\" : \"1014\",      \"skuNameShort\" : \"보통\"    } ]  } ]}",
+    "result_api_code": ""
+}

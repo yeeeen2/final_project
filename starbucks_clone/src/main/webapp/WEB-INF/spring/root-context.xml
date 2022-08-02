@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	xsi:schemaLocation="http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	
+	<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
+        <property name="driverClassName" value="oracle.jdbc.OracleDriver"></property>
+        <property name="jdbcUrl" value ="jdbc:oracle:thin:@localhost:1521:xe"/>
+        <property name="username" value="oracle"/>
+        <property name="password" value="oracle"/>
+     </bean>
+     
+     <bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource">
+        <constructor-arg ref="hikariConfig"/>
+     </bean>
+     
+    <!-- 데이터소스 마이바티스에 등록 및 xml 위치 설정 -->
+     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref ="dataSource"/>
+        <property name="mapperLocations" value="classpath:/mappers/**/*Mapper.xml"/>
+     </bean>
+     
+     <mybatis-spring:scan base-package="com.clone.starbucks.DAO"/>
+     
+     <!-- 0620예은- 메일전송 -->
+     <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="smtp.naver.com" />
+		<property name="port" value="465" />
+		<property name="username" value="inis2510@naver.com" />
+		<property name="password" value="HDF4FBB5G6BY" />
+		<property name="defaultEncoding" value="UTF-8" />
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.transport.protocal">smtp</prop>
+				<prop key="mail.transport.auth">true</prop>
+				<prop key="mail.smtp.starttls.enable">true</prop>
+				<prop key="mail.debug">true</prop>
+				<prop key="mail.smtps.checkserveridentity">true</prop>
+			  	<prop key="mail.smtps.ssl.trust">*</prop>
+			 	<prop key="mail.smtp.socketFactory.class">javax.net.ssl.SSLSocketFactory</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="templateEmailmessage" class="org.springframework.mail.SimpleMailMessage" /> 
+    
+</beans>
+		
+

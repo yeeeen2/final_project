@@ -1,0 +1,11 @@
+{
+    "result_code": "SUCCESS",
+    "error_msg": "",
+    "alert_msg": "",
+    "location_href": "",
+    "location_replace": "",
+    "custom_script": "",
+    "total_cnt": 0,
+    "data": "{  \"categoryList\" : [ {    \"categoryCode\" : \"X0000020\",    \"categoryName\" : \"NEW\",    \"skuList\" : [ ]  }, {    \"categoryCode\" : \"X0000042\",    \"categoryName\" : \"추천\",    \"skuList\" : [ ]  }, {    \"categoryCode\" : \"X0000066\",    \"categoryName\" : \"리저브 에스프레소\",    \"skuList\" : [ ]  }, {    \"categoryCode\" : \"X0000041\",    \"categoryName\" : \"리저브 드립\",    \"skuList\" : [ ]  }, {    \"categoryCode\" : \"X0000046\",    \"categoryName\" : \"콜드 브루\",    \"skuList\" : [ ]  }, {    \"categoryCode\" : \"X0000065\",    \"categoryName\" : \"블론드\",    \"skuList\" : [ ]  }, {    \"categoryCode\" : \"X0000026\",    \"categoryName\" : \"에스프레소\",    \"skuList\" : [ ]  }, {    \"categoryCode\" : \"X0000056\",    \"categoryName\" : \"디카페인 커피\",    \"skuList\" : [ ]  }, {    \"categoryCode\" : \"X0000031\",    \"categoryName\" : \"프라푸치노\",    \"skuList\" : [ ]  }, {    \"categoryCode\" : \"X0000037\",    \"categoryName\" : \"블렌디드\",    \"skuList\" : [ ]  }, {    \"categoryCode\" : \"X0000039\",    \"categoryName\" : \"피지오\",    \"skuList\" : [ ]  }, {    \"categoryCode\" : \"X0000027\",    \"categoryName\" : \"티바나\",    \"skuList\" : [ ]  }, {    \"categoryCode\" : \"X0000025\",    \"categoryName\" : \"브루드 커피\",    \"skuList\" : [ ]  }, {    \"categoryCode\" : \"X0000034\",    \"categoryName\" : \"기타\",    \"skuList\" : [ ]  } ]}",
+    "result_api_code": ""
+}

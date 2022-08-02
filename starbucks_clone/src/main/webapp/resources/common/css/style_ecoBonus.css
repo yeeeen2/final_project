@@ -1,0 +1,84 @@
+@charset 'utf-8';
+
+/*s::개인컵 리워드 설정*/
+.ecoBonusArea {position:relative; width:100%; margin-top:30px; border-top:1px solid #222; border-bottom:1px solid #222; color:#222; font-size:14px;} 
+.ecoBonusArea dl.ecoSelectWrap {position:relative; width:100%; overflow: hidden; box-sizing: border-box; min-height:48px; box-sizing: border-box;}
+.ecoBonusArea dl.ecoSelectWrap dt,
+.ecoBonusArea dl.ecoSelectWrap dd {display:inline-block; vertical-align: middle;  padding:20px 0; box-sizing: border-box; padding-left:15px;}
+.ecoBonusArea dl.ecoSelectWrap dt {width:221px; background-color:#f4f4f2; font-weight: bold;}
+.ecoBonusArea dl.ecoSelectWrap dd {width:auto; padding-left:10px;}
+.ecoBonusArea dl.ecoSelectWrap dd input.ecoDiscount {margin-left:20px;}
+
+.ecoInfo {margin-top:30px; padding:18px 15px; box-sizing: border-box; width:100%; background-color:#f3f3f1; border-radius: 4px;}
+.ecoInfo p.ecoInfotit {font-size:16px; color:#666666; font-weight: bold;}
+.ecoInfo dl {margin-top:12px; color:#656565; font-size:13px;}
+.ecoInfo dl dt {position:relative; vertical-align: middle; display:inline-block;}
+/*.ecoInfo dl dt:before {content: ''; display:inline-block; width:4px; height:4px; border-radius: 50px; background-color: #707070; margin-right:5px;  margin-bottom:4px; vertical-align: middle;}*/
+.ecoInfo dl dd {padding-top:5px; line-height:1.2em;}
+.ecoNote {color:#656565; font-size:13px; margin-top:38px;}
+.ecoNote .ecoNoteTit {font-weight: bold; font-size:16px; margin-top:25px; color:#666;}
+.ecoNote ul li:first-child {padding-top:13px;}
+.ecoNote ul li {padding-top:10px; position:relative; line-height:1.2em;}
+/*.ecoNote ul li:before {content: ''; display:inline-block; width:4px; height:4px; border-radius: 50px; background-color: #707070; margin-right:5px; margin-bottom:4px; vertical-align: middle;}
+*/
+.ecoBonusWrap .dtBtnWrap2 {position:relative; overflow: hidden; text-align:right; margin-top:20px;}
+.ecoBonusWrap .dtBtnWrap2 a,
+.ecoBonusWrap .dtBtnWrap2 span{display:inline-block; height:28px; line-height:28px; border-radius: 3px; font-size:12px; font-weight:bold; text-align:center}
+.ecoBonusWrap .dtBtnWrap2 .dtBtn4{width:85px; color:#222; background:#e2c383; border:1px solid #bb9f65}
+.ecoBonusWrap .dtBtnWrap2 .dtBtn5{width:85px; color:#fff;  background:#222; border:1px solid #222}
+
+.ecoPop .dtPopInner {text-align:center;}
+
+/*20190109 팝업 추가*/
+.dtPop.ecoPop {display:none; position:fixed; top:50%; left:50%; width:320px; margin-left:-160px; background:#ffffff; border-radius:3px; overflow:hidden; z-index:100}
+.dtPop.ecoPop div.head {position:relative; padding:15px; background:#8c8279; color:#fff; font-size:14px}
+.dtPop.ecoPop div.head p.close {position:absolute; top:15px; right:11px}
+.dtPop.ecoPop div.head p.close a{display:block; width:14px; height:14px; transition:transform 1s; -webkit-transition:-webkit-transform 1s; background:url('../img/util/cal/calpop_close2n.png') 0 0 no-repeat; background-size:100% auto; text-indent:-9999px}
+.dtPop.ecoPop div.head p.close a:hover {transform:rotate(180deg); }
+.dtPop.ecoPop .dtPopInner {position:relative; padding:20px 20px 0 20px}
+.dtPop.ecoPop .dtPopInner p {line-height:20px; font-size:14px; color:#222}
+.dtPop.ecoPop .dtPopInner span {display:inline-block; padding-top:10px; line-height:16px; font-size:12px; color:#666666}
+.dtPop.ecoPop .dtPopInner ul{padding-top:10px; padding-bottom:5px}
+.dtPop.ecoPop .dtPopInner ul li{height:28px}
+.dtPop.ecoPop .dtPopInner ul li label{display:inline-block; padding-left:5px; line-height:20px; font-size:12px; color:#696468}
+.dtPop.ecoPop .dtPopInner .dtPopInput{padding-top:15px}
+.dtPop.ecoPop .dtPopInner .dtPopInput input{width:100%; height:28px; border:1px solid #ddd; border-radius:3px; color:#666; box-sizing: border-box}
+.dtPop.ecoPop .dtPopInner .dtPopConBtn{display:block; text-align: center}
+.dtPop.ecoPop .dtPopInner .dtPopConBtn a{display:inline-block; padding-right:10px; line-height:20px; color:#333; font-size:12px; background:url('../img/util/dtPopBtn.png') no-repeat right 50%; border-bottom:1px dotted #222}
+
+.dtPop.ecoPop .dtPopBtn{padding:20px 0; text-align: center}
+.dtPop.ecoPop .dtPopBtn a {display:inline-block; width:63px; height:100%; line-height:30px; font-size:14px; text-align:center; border-radius: 3px}
+.dtPop.ecoPop .dtPopBtn a.dtPopBtn1 {background:#e2c383; border:1px solid #bb9f65; color:#222}
+.dtPop.ecoPop .dtPopBtn a.dtPopBtn2 {background:#222; border:1px solid #222; color:#fff; padding:0; margin-left:2px;}
+
+.ecoPop .dtPopInner.left {text-align:left;}
+
+/*mobile_ver*/
+@media screen and  (max-width:640px) {
+	.ecoBonusArea {border-bottom:0; margin-top:15px;}
+	.ecoBonusArea dl.ecoSelectWrap dt,
+	.ecoBonusArea dl.ecoSelectWrap dd {display:block; width:100%; background-color: #fff;}
+	.ecoBonusArea dl.ecoSelectWrap dt {padding:15px 0 0 10px;}
+	.ecoBonusArea dl.ecoSelectWrap dd {padding:17px 0 10px 10px;}
+
+	.ecoInfo {margin-top:25px;}
+	.ecoInfo dl dt,
+	.ecoInfo dl dd {line-height:1.4em;}
+	/*.ecoInfo dl dt:before {margin-right:3px; margin-bottom:2px;}*/
+
+	.ecoNote {margin-top: 30px}
+	.ecoNote ul li {line-height:1.4em;}
+	/*.ecoNote ul li:before {margin-right:3px; margin-bottom:2px;}*/
+
+	.ecoBonusWrap .dtBtnWrap2 a,
+	.ecoBonusWrap .dtBtnWrap2 span{height:38px; line-height:38px; font-size:14px}
+	.ecoBonusWrap .dtBtnWrap2 .dtBtn4{float:left; width:48%}
+	.ecoBonusWrap .dtBtnWrap2 .dtBtn5{float:right; width:48%}
+}
+
+@media screen and  (max-width:320px) {
+	.dtPop.ecoPop {width:300px; margin:0 auto; left:0; right:0;}
+}
+/*e::개인컵 리워드 설정*/
+
+

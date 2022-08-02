@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
+	
+	<!-- Enables the Spring MVC @Controller programming model -->
+	<annotation-driven />
+
+	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
+
+	    <resources mapping="/resources/**" location="/resources/" />
+	    <resources mapping="/img/event/**" location="/WEB-INF/views/img/event/" />
+  		<resources mapping="/common/**" location="/resources/common/" />
+  		<resources mapping="/common/img/store/pin/**" location="/resources/common/img/store/" />
+		<resources mapping="/css/**" location="/resources/common/css/" />
+		<resources mapping="/fonts/**" location="/resources/common/fonts/" />
+		<resources mapping="/img/**" location="/resources/common/img/" />
+		<resources mapping="/js/**" location="/resources/common/js/" />
+		<resources mapping="/upload/json/store/map/**" location="/resources/upload/json/store/map/" />
+		<resources mapping="/upload/json/store/storelist/**" location="/resources/upload/json/store/storelist/" />
+		<resources mapping="/upload/json/menu/**" location="/resources/upload/json/menu/" />
+		<resources mapping="/upload/banner/**" location="/WEB-INF/views/upload/banner/" />
+		<resources mapping="/upload/common/**" location="/WEB-INF/views/upload/common/" />
+		<resources mapping="/upload/email/**" location="/WEB-INF/views/upload/email/" />
+		<resources mapping="/v2/maps/**" location="/WEB-INF/views/v2/maps/" />
+		<resources mapping="/sdk/js/**" location="/WEB-INF/views/sdk/js/" />
+		<resources mapping="/upload/prcmcard/**" location="/WEB-INF/views/upload/prcmcard/" />
+		<resources mapping="/img/util/csi/**" location="/resources/common/img/util/csi" />
+
+
+	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
+	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<beans:property name="prefix" value="/WEB-INF/views/" />
+		<beans:property name="suffix" value=".jsp" />
+	</beans:bean>
+	
+	<context:component-scan base-package="com.clone.starbucks" />
+	<context:component-scan base-package="com.clone.starbucks.controller" />
+
+	
+	
+	
+</beans:beans>
